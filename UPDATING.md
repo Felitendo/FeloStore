@@ -2,7 +2,7 @@ How to update to latest upstream repo:
 
 Only once:
 
-- git remote add public https://github.com/ImranR98/Obtainium
+- git remote add public https://github.com/Felitendo/FeloStore
 
 Then:
 
