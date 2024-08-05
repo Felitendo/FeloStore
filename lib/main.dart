@@ -191,11 +191,8 @@ class _FeloStoreState extends State<FeloStore> {
     });
     if (!mounted) return;
 
-    var settingsProvider = context.read<SettingsProvider>();
-    var isFirstRun = settingsProvider.checkAndFlipFirstRun();
-    if (isFirstRun) {
+    var settingsProvider = context.read<SettingsProvider>(); 
       await loadImportConfig(context);
-    }
   }
 
   @override
