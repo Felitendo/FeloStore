@@ -7,9 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:felostore/components/generated_form_modal.dart';
 import 'package:felostore/custom_errors.dart';
-import 'package:felostore/pages/add_app.dart';
 import 'package:felostore/pages/apps.dart';
-import 'package:felostore/pages/import_export.dart';
 import 'package:felostore/pages/settings.dart';
 import 'package:felostore/providers/apps_provider.dart';
 import 'package:felostore/providers/settings_provider.dart';
@@ -43,10 +41,6 @@ class _HomePageState extends State<HomePage> {
   List<NavigationPageItem> pages = [
     NavigationPageItem(tr('appsString'), Icons.apps,
         AppsPage(key: GlobalKey<AppsPageState>())),
-    NavigationPageItem(
-        tr('addApp'), Icons.add, AddAppPage(key: GlobalKey<AddAppPageState>())),
-    NavigationPageItem(
-        tr('importExport'), Icons.import_export, const ImportExportPage()),
     NavigationPageItem(tr('settings'), Icons.settings, const SettingsPage())
   ];
 
@@ -59,26 +53,12 @@ class _HomePageState extends State<HomePage> {
   Future<void> initDeepLinks() async {
     _appLinks = AppLinks();
 
-    goToAddApp(String data) async {
-      switchToPage(1);
-      while (
-          (pages[1].widget.key as GlobalKey<AddAppPageState>?)?.currentState ==
-              null) {
-        await Future.delayed(const Duration(microseconds: 1));
-      }
-      (pages[1].widget.key as GlobalKey<AddAppPageState>?)
-          ?.currentState
-          ?.linkFn(data);
-    }
-
     interpretLink(Uri uri) async {
       isLinkActivity = true;
       var action = uri.host;
       var data = uri.path.length > 1 ? uri.path.substring(1) : "";
       try {
-        if (action == 'add') {
-          await goToAddApp(data);
-        } else if (action == 'app' || action == 'apps') {
+        if (action == 'app' || action == 'apps') {
           var dataStr = Uri.decodeComponent(data);
           if (await showDialog(
                   context: context,
@@ -230,11 +210,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         onWillPop: () async {
-          if (isLinkActivity &&
-              selectedIndexHistory.length == 1 &&
-              selectedIndexHistory.last == 1) {
-            return true;
-          }
           setIsReversing(selectedIndexHistory.length >= 2
               ? selectedIndexHistory.reversed.toList()[1]
               : 0);
