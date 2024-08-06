@@ -97,7 +97,7 @@ bool _isNumeric(String s) {
 Future<List<MapEntry<String, String>>> grabLinksCommon(
     Response res, Map<String, dynamic> additionalSettings) async {
   if (res.statusCode != 200) {
-    throw getObtainiumHttpError(res);
+    throw getFeloStoreHttpError(res);
   }
   var html = parse(res.body);
   List<MapEntry<String, String>> allLinks = html

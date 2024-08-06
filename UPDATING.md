@@ -2,7 +2,7 @@ How to update to latest upstream repo:
 
 Only once:
 
-- git remote add public https://github.com/Felitendo/FeloStore
+- git remote add public https://github.com/Imranr98/FeloStore
 
 Then:
 
