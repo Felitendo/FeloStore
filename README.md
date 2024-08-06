@@ -2,7 +2,7 @@
 
 Get my app updates straight from the source.
 
-FeloStore allows you to install and update apps from Felitendo, and receive notifications when new releases are made available.
+FeloStore allows you to install and update apps from Felitendo, and receive notifications when new releases are made available. Based on Obtainium by Imranr98.
 
 More info:
 - [FeloStore/wiki](https://github.com/Felitendo/FeloStore/wiki)
