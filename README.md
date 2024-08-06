@@ -1,4 +1,4 @@
-# ![FeloStore Icon](./assets/graphics/icon_small.png) FeloStoree
+# ![FeloStore Icon](./assets/graphics/icon_small.png) FeloStore
 
 Get Android app updates straight from the source.
 
