@@ -14,8 +14,6 @@ More info:
     alt="Get it on GitHub"
     height="80">](https://github.com/Felitendo/FeloStore/releases)
      
-[PGP Public Key](https://keyserver.ubuntu.com/pks/lookup?search=contact%40felitendo.dev&fingerprint=on&op=index)
-
 ## Limitations
 - For some sources, data is gathered using Web scraping and can easily break due to changes in website design. In such cases, more reliable methods may be unavailable.
 
