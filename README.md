@@ -1,48 +1,12 @@
 # ![FeloStore Icon](./assets/graphics/icon_small.png) FeloStore
 
-Get Android app updates straight from the source.
+Get my app updates straight from the source.
 
-FeloStore allows you to install and update apps directly from their releases pages, and receive notifications when new releases are made available.
+FeloStore allows you to install and update apps from Felitendo, and receive notifications when new releases are made available.
 
 More info:
 - [FeloStore/wiki](https://github.com/Felitendo/FeloStore/wiki)
 - [AppVerifier](https://github.com/soupslurpr/AppVerifier) - App verification tool (recommended, integrates with FeloStore)
-- [apps.felostore.felitendo.dev](https://apps.felostore.felitendo.dev/) - Crowdsourced app configurations
-- [Side Of Burritos - You should use this instead of F-Droid | How to use app RSS feed](https://youtu.be/FFz57zNR_M0) - Original motivation for this app
-
-Currently supported App sources:
-- Open Source - General:
-  - [GitHub](https://github.com/)
-  - [GitLab](https://gitlab.com/)
-  - [Forgejo](https://forgejo.org/) ([Codeberg](https://codeberg.org/))
-  - [F-Droid](https://f-droid.org/)
-  - Third Party F-Droid Repos
-  - [IzzyOnDroid](https://android.izzysoft.de/)
-  - [SourceHut](https://git.sr.ht/)
-- Other - General:
-  - [APKPure](https://apkpure.net/)
-  - [Aptoide](https://aptoide.com/)
-  - [Uptodown](https://uptodown.com/)
-  - [APKMirror](https://apkmirror.com/) (Track-Only)
-  - [Huawei AppGallery](https://appgallery.huawei.com/)
-  - Jenkins Jobs
-- Open Source - App-Specific:
-  - [Signal](https://signal.org/)
-  - [VLC](https://videolan.org/)
-- Other - App-Specific:
-  - [WhatsApp](https://whatsapp.com)
-  - [Telegram App](https://telegram.org)
-  - [Neutron Code](https://neutroncode.com)
-- Direct APK Link
-- "HTML" (Fallback): Any other URL that returns an HTML page with links to APK files
-
-## Finding App Configurations
-
-You can find crowdsourced app configurations at [apps.felostore.felitendo.dev](https://apps.felostore.felitendo.dev).
-
-If you can't find the configuration for an app you want, feel free to leave a request on the [discussions page](https://github.com/Felitendo/apps.felostore.felitendo.dev/discussions/new?category=app-requests).
-
-Or, contribute some configurations to the website by creating a PR at [this repo](https://github.com/Felitendo/apps.felostore.felitendo.dev).
 
 ## Installation
 
