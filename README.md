@@ -1,6 +1,6 @@
 # ![FeloStore Icon](./assets/graphics/icon_small.png) FeloStore
 
-Get Android App Updates Directly From the Source.
+Get Android app updates straight from the source.
 
 FeloStore allows you to install and update apps directly from their releases pages, and receive notifications when new releases are made available.
 
