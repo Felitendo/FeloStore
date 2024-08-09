@@ -1344,10 +1344,6 @@ class AppsProvider with ChangeNotifier {
                 ? []
                 : [
                     [
-                      GeneratedFormSwitch('rmAppEntry',
-                          label: tr('removeFromFeloStore'), defaultValue: true)
-                    ],
-                    [
                       GeneratedFormSwitch('uninstallApp',
                           label: tr('uninstallFromDevice'))
                     ]
