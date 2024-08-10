@@ -1329,47 +1329,46 @@ class AppsProvider with ChangeNotifier {
   }
 
   Future<bool> removeAppsWithModal(BuildContext context, List<App> apps) async {
-    var showUninstallOption = apps
-        .where((a) =>
-            a.installedVersion != null &&
-            a.additionalSettings['trackOnly'] != true)
-        .isNotEmpty;
-    var values = await showDialog(
-        context: context,
-        builder: (BuildContext ctx) {
-          return GeneratedFormModal(
-            primaryActionColour: Theme.of(context).colorScheme.error,
-            title: plural('removeAppQuestion', apps.length),
-            items: !showUninstallOption
-                ? []
-                : [
-                    [
-                      GeneratedFormSwitch('uninstallApp',
-                          label: tr('uninstallFromDevice'))
-                    ]
-                  ],
-            initValid: true,
-          );
-        });
-    if (values != null) {
-      bool uninstall = values['uninstallApp'] == true && showUninstallOption;
-      bool remove = values['rmAppEntry'] == true || !showUninstallOption;
-      if (uninstall) {
-        for (var i = 0; i < apps.length; i++) {
-          if (apps[i].installedVersion != null) {
-            uninstallApp(apps[i].id);
-            apps[i].installedVersion = null;
-          }
-        }
-        await saveApps(apps, attemptToCorrectInstallStatus: false);
-      }
-      if (remove) {
-        await removeApps(apps.map((e) => e.id).toList());
-      }
-      return uninstall || remove;
-    }
+  var showUninstallOption = apps
+      .where((a) =>
+          a.installedVersion != null &&
+          a.additionalSettings['trackOnly'] != true)
+      .isNotEmpty;
+  
+  if (!showUninstallOption) {
     return false;
   }
+
+  var values = await showDialog(
+    context: context,
+    builder: (BuildContext ctx) {
+      return GeneratedFormModal(
+        primaryActionColour: Theme.of(context).colorScheme.error,
+        title: plural('removeAppQuestion', apps.length),
+        items: [
+          [
+            GeneratedFormSwitch('uninstallApp',
+                label: tr('uninstallFromDevice'))
+          ]
+        ],
+        initValid: true,
+      );
+    }
+  );
+
+  if (values != null && values['uninstallApp'] == true) {
+    for (var app in apps) {
+      if (app.installedVersion != null) {
+        uninstallApp(app.id);
+        app.installedVersion = null;
+      }
+    }
+    await saveApps(apps, attemptToCorrectInstallStatus: false);
+    return true;
+  }
+  
+  return false;
+}
 
   Future<void> openAppSettings(String appId) async {
     final AndroidIntent intent = AndroidIntent(
