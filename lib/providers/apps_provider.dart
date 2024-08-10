@@ -1348,7 +1348,7 @@ class AppsProvider with ChangeNotifier {
         items: [
           [
             GeneratedFormSwitch('uninstallApp',
-                label: tr('uninstallFromDevice'))
+                label: tr('uninstallFromDevice'), defaultValue: true)
           ]
         ],
         initValid: true,
