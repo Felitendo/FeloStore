@@ -1,11 +1,5 @@
-# ![FeloStore Icon](./assets/graphics/icon_small.png) FeloStore
+# THE END
 
-Get my app updates straight from the source.
+This Repository of FeloStore will be no longer supported from now on!
 
-FeloStore allows you to install and update apps from Felitendo, and receive notifications when new releases are made available. Based on Obtainium by Imranr98.
-
-## Installation
-
-[<img src="https://github.com/machiav3lli/oandbackupx/blob/034b226cea5c1b30eb4f6a6f313e4dadcbb0ece4/badge_github.png"
-    alt="Get it on GitHub"
-    height="80">](https://github.com/Felitendo/FeloStore/releases)
+Please visit https://github.com/FeloStore for an updated Version (COMING SOON)!
