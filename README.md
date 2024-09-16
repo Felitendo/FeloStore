@@ -1,4 +1,4 @@
-# THE END
+# WE MOVED
 
 This Repository of FeloStore will be no longer supported from now on!
 
